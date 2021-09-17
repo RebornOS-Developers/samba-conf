@@ -1,0 +1,13 @@
+post_install() {
+rm /etc/nsswitch.conf
+cp /etc/nsswitch.conf-new /etc/nsswitch.conf
+rm /etc/nsswitch.conf-new
+chmod 644 /etc/nsswitch.conf-new
+}
+
+post_upgrade() {
+rm /etc/nsswitch.conf
+cp /etc/nsswitch.conf-new /etc/nsswitch.conf
+rm /etc/nsswitch.conf-new
+chmod 644 /etc/nsswitch.conf-new
+}
